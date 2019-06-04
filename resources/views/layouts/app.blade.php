@@ -14,10 +14,10 @@
 
 </head>
 <body class="font-sketch h-screen antialiased leading-none sm:px-6">
-<div id="app">
 
-    <nav class="mx-10 my-5 p-3 mb-8 border-2 border-gray-800 border-sketchy-nav">
-        <div class="container mx-auto px-6 md:px-0">
+<div id="app">
+    <nav class="bord mb-12 my-5 italic p-3 border-2 border-gray-800 border-sketchy-nav">
+        <div class="w-2/3 mx-auto px-6 md:px-0">
             <div class="flex items-center justify-center">
                 <div class="flex items-center flex-shrink-0 mr-6 sm:mr-0">
                     <a href="{{ url('/') }}">
@@ -28,7 +28,7 @@
                             </g>
                         </svg>
                     </a>
-                    <a href="{{ url('/') }}" class="no-underline sm:text-3xl lg:text-4xl">
+                    <a href="{{ url('/') }}" class="no-underline sm:text-2xl lg:text-3xl">
                         Ashraf Monshi <span class="sm:text-2xl lg:text-3xl tracking-tighter">Blog</span>
                     </a>
                 </div>
@@ -49,12 +49,14 @@
         </div>
     </nav>
 
-    <div class="container mx-auto px-5 lg:max-w-screen">
+    <div class="w-2/3 mx-auto px-5 lg:max-w-screen">
         @yield('content')
+
+        <div class="border-t mt-8 mb-4"></div>
     </div>
 
 
-    <div class="mt-20 mb-10 text-center text-xl leading-loose">
+    <div class="mt-16 mb-10 text-center text-md leading-loose font-neucha">
         Copyright {{ date('Y') }} - ATM
         <br>
         made with ❤️ by
@@ -73,7 +75,11 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-376141-13"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
 
         gtag('config', 'UA-376141-13');

@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="clearfix mb-5">
-        <div class="leading-loose float-left text-gray-700 text-5xl">
+        <div class="leading-loose font-semibold float-left text-gray-700 text-4xl">
             {{ $post->title }}
         </div>
         <div class="leading-loose float-right pt-2 text-gray-700">
@@ -16,29 +16,18 @@
         </div>
     </div>
 
-    <div class="w-full mb-10">
-        <img class="object-cover h-48 w-full" src="{{ $post->featured_image ?? 'ssss' }}">
-        <p class="pt-3 text-gray-700">{!! $post->featured_image_caption !!}</p>
-    </div>
+    <div class="border-t -mt-4 mb-4"></div>
 
-    <div class="pl-5 mb-5 text-2xl leading-relaxed font-sans" style="font-family: 'Georgia, Cambria', 'Times New Roman', Times, serif !important;">
-        {{--<pre><code class="language-css">p { color: red }</code></pre>
+    @if($post->featured_image)
+        <div class="w-full mb-10">
+            <a href="/blog/{{ $post->slug }}">
+                <img class="object-cover h-48 w-full" src="{{ $post->featured_image ?? '' }}">
+                <p class="pt-3 text-gray-700 font-neucha italic ml-4">{!! $post->featured_image_caption !!}</p>
+            </a>
+        </div>
+    @endif
 
-        <div class="inline_html" contenteditable="false">
-            <pre>
-                <code class="language-js">
-var Prism = require('prismjs');
-
-// The code snippet you want to highlight, as a string
-var code = "var data = 1;";
-
-// Returns a highlighted HTML string
-var html = Prism.highlight(code, Prism.languages.javascript, 'javascript');
-</code>
-</pre>
-        </div>--}}
-
+    <div class="pl-5 mb-5 text-2xl leading-relaxed font-neucha">
         {!! nl2br($post->body) !!}
-
     </div>
 @endsection

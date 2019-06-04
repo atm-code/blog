@@ -725,7 +725,8 @@ video {
   color: #abb2bf;
   background: #ccdd33;
   background-color: #f7fafc;
-  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.625;
   margin-top: 2rem;
   margin-bottom: 2rem;
   padding: 1rem;
@@ -4020,6 +4021,10 @@ video {
 
 .font-sketch{
   font-family: Cabin Sketch;
+}
+
+.font-neucha{
+  font-family: Neucha;
 }
 
 .font-hairline{
@@ -11371,6 +11376,10 @@ video {
     font-family: Cabin Sketch;
   }
 
+  .sm\:font-neucha{
+    font-family: Neucha;
+  }
+
   .sm\:font-hairline{
     font-weight: 100;
   }
@@ -18715,6 +18724,10 @@ video {
 
   .md\:font-sketch{
     font-family: Cabin Sketch;
+  }
+
+  .md\:font-neucha{
+    font-family: Neucha;
   }
 
   .md\:font-hairline{
@@ -26063,6 +26076,10 @@ video {
     font-family: Cabin Sketch;
   }
 
+  .lg\:font-neucha{
+    font-family: Neucha;
+  }
+
   .lg\:font-hairline{
     font-weight: 100;
   }
@@ -33407,6 +33424,10 @@ video {
 
   .xl\:font-sketch{
     font-family: Cabin Sketch;
+  }
+
+  .xl\:font-neucha{
+    font-family: Neucha;
   }
 
   .xl\:font-hairline{
