@@ -1,30 +1,35 @@
 @import url("https://fonts.googleapis.com/css?family=Neucha|Cabin+Sketch");
-
 @tailwind base;
+
 @tailwind components;
 
 .border-sketchy-nav {
-    border-radius: 25px 25px 55px 5px/5px 55px 25px 25px;
+  border-radius: 25px 25px 55px 5px/5px 55px 25px 25px;
 }
 
-
 .border-sketchy-lg {
-    border-radius: 555px 25px 15px 25px/25px 5px 35px 555px;
-    transition: all 0.3s ease-in-out;
+  border-radius: 555px 25px 15px 25px/25px 5px 35px 555px;
+  transition: all 0.3s ease-in-out;
 }
 
 .border-sketchy-sm {
-    border-radius: 255px 25px 225px 25px/25px 225px 25px 255px;
+  border-radius: 255px 25px 225px 25px/25px 225px 25px 255px;
 }
 
 .border-sketchy-lg:hover {
-    border-radius: 255px 25px 225px 25px/25px 225px 25px 255px;
-    @applay border-yellow-100;
+  border-radius: 255px 25px 225px 25px/25px 225px 25px 255px;
 }
 
+.ql-syntax {
+  color: #abb2bf;
+  background: #ccdd33;
+  @apply bg-gray-100 font-bold my-8 p-4 border-2 border-gray-300 border-sketchy-nav;
+}
+
+@import "highlightjs.css";
 
 @tailwind utilities;
 
 .bord {
-    border: solid 1px #c05621;
+  border: solid 1px #c05621;
 }

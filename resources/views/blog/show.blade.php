@@ -16,17 +16,29 @@
         </div>
     </div>
 
-    <div class="mb-5">
-
-    </div>
-
     <div class="w-full mb-10">
         <img class="object-cover h-48 w-full" src="{{ $post->featured_image ?? 'ssss' }}">
         <p class="pt-3 text-gray-700">{!! $post->featured_image_caption !!}</p>
     </div>
 
     <div class="pl-5 mb-5 text-2xl leading-relaxed font-sans" style="font-family: 'Georgia, Cambria', 'Times New Roman', Times, serif !important;">
-        {!! nl2br($post->body) !!}
-    </div>
+        {{--<pre><code class="language-css">p { color: red }</code></pre>
 
+        <div class="inline_html" contenteditable="false">
+            <pre>
+                <code class="language-js">
+var Prism = require('prismjs');
+
+// The code snippet you want to highlight, as a string
+var code = "var data = 1;";
+
+// Returns a highlighted HTML string
+var html = Prism.highlight(code, Prism.languages.javascript, 'javascript');
+</code>
+</pre>
+        </div>--}}
+
+        {!! nl2br($post->body) !!}
+
+    </div>
 @endsection
