@@ -21,8 +21,7 @@
 }
 
 .ql-syntax {
-  color: #abb2bf !important;
-  background: #ccdd33 !important;
+  @apply bg-gray-100 text-base leading-relaxed my-8 p-4 border-2 border-gray-300 border-sketchy-nav;
 }
 
 @import "highlightjs.css";

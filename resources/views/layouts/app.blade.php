@@ -16,7 +16,7 @@
 <body class="font-sketch h-screen antialiased leading-none sm:px-6">
 
 <div id="app">
-    <nav class="bord mb-12 my-5 italic p-3 border-2 border-gray-800 border-sketchy-nav">
+    <nav class="mb-12 my-5 italic p-3 border-2 border-gray-800 border-sketchy-nav">
         <div class="w-2/3 mx-auto px-6 md:px-0">
             <div class="flex items-center justify-center">
                 <div class="flex items-center flex-shrink-0 mr-6 sm:mr-0">
