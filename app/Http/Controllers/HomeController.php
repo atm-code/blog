@@ -2,33 +2,33 @@
 
 namespace App\Http\Controllers;
 
-use Wink\WinkPost;
+use App\AtmPost;
 
 class HomeController extends Controller {
 
     public function index()
     {
-        $posts = WinkPost::with('tags')
+        $posts = AtmPost::with('tags')
             ->live()
             ->orderBy('publish_date' , 'DESC')
             ->simplePaginate(12);
 
         return view('blog.index' , [
-            'posts' => $posts,
+            'posts' => $posts ,
         ]);
     }
 
     public function show($slug)
     {
-        return view('blog.show', [
-            'post' => WinkPost::where('slug', $slug)->first()
-        ]);
-    }
+        $post = AtmPost::where('slug' , $slug)->first();
 
-    function readingTime($post) {
-        $word = str_word_count(strip_tags($post));
-        $m = floor($word / 200);
-        $est = $m . ' minute' . ($m == 1 ? '' : 's');
-        return $est;
+        views($post)
+            ->delayInSession($post->reading_time)
+            ->record()
+        ;
+
+        return view('blog.show' , [
+            'post' => $post ,
+        ]);
     }
 }

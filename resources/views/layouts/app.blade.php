@@ -71,6 +71,8 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
 
 @if(!app()->environment('local'))
+    <script id="dsq-count-scr" src="//wh-em.disqus.com/count.js" async></script>
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-376141-13"></script>
     <script>

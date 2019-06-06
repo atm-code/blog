@@ -85,6 +85,8 @@
       <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
       <path value="$PROJECT_DIR$/vendor/writingink/wink" />
       <path value="$PROJECT_DIR$/vendor/laravel-frontend-presets/tailwindcss" />
+      <path value="$PROJECT_DIR$/vendor/jaybizzle/crawler-detect" />
+      <path value="$PROJECT_DIR$/vendor/cyrildewit/eloquent-viewable" />
     </include_path>
   </component>
   <component name="PhpInterpreters">
