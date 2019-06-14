@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
+    <pre class="ql-syntax" spellcheck="false">&lt;i <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"fa {{ $resource::$icon ?? 'fa-chevron-left' }}"</span>&gt;<span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span></pre>
+
     <div class="clearfix mb-5">
         <div class="leading-loose font-semibold float-left text-gray-700 text-4xl">
             {{ $post->title }}
@@ -38,7 +40,26 @@
         <div class="border-t mt-8 mb-4"></div>
         <br>
 
-      
+        <div id="disqus_thread"></div>
+        <script>
+            var PAGE_IDENTIFIER = "{{ $post->slug }}";
+            var PAGE_URL        = "{{ url('/blog/'.$post->slug) }}";
+
+            var disqus_config = function () {
+                this.page.url        = PAGE_URL;
+                this.page.identifier = PAGE_IDENTIFIER;
+            };
+
+            (function () { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://wh-em.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the
+            <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
     @endif
-    
+
 @endsection
