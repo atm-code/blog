@@ -23,10 +23,8 @@
 
     @if($post->featured_image)
         <div class="w-full mb-10">
-            <a href="/blog/{{ $post->slug }}">
-                <img class="object-cover h-48 w-full" src="{{ $post->featured_image ?? '' }}">
-                <p class="pt-3 text-gray-700 font-neucha italic ml-4">{!! $post->featured_image_caption !!}</p>
-            </a>
+            {{--<img class="object-cover h-48 w-full" src="{{ $post->featured_image ?? '' }}">--}}
+            <p class="pt-3 text-gray-700 font-neucha italic ml-4">{!! $post->featured_image_caption !!}</p>
         </div>
     @endif
 
