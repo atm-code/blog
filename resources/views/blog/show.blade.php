@@ -1,8 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <pre class="ql-syntax" spellcheck="false">&lt;i <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"fa {{ $resource::$icon ?? 'fa-chevron-left' }}"</span>&gt;<span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span></pre>
-
+    <div class="bg-white p-4 border-sketchy-lg shadow">
     <div class="clearfix mb-5">
         <div class="leading-loose font-semibold float-left text-gray-700 text-4xl">
             {{ $post->title }}
@@ -61,5 +60,5 @@
             <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
         </noscript>
     @endif
-
+    </div>
 @endsection
