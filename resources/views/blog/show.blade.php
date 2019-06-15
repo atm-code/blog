@@ -33,7 +33,7 @@
         {!! nl2br($post->body) !!}
     </div>
 
-    @if(!app()->environment('local'))
+    @if(!app()->environment('local') || 1===1)
 
         <br>
         <div class="border-t mt-8 mb-4"></div>

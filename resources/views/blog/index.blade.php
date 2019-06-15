@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="sketchy-box mb-10 p-6 text-2xl font-neucha border-2 border-gray-500 bg-gray-300 border-sketchy-sm shadow-lg">
+    <div class="lg:sketchy-box leading-loose sm:sketchy-box-none mb-10 p-6 text-2xl font-neucha border-2 border-gray-500 bg-gray-300 border-sketchy-sm shadow-lg">
         Welcome to my new blog , it's just a beginning, I hope I keep blogging .
     </div>
 
@@ -12,7 +12,7 @@
     <div>
         @foreach($posts as $post)
             <div class="border-2 border-gray-500 border-sketchy-lg p-4 mb-10 shadow-lg bg-white">
-                <div class="text-gray-700 text-4xl mb-5 text-red-800 hover:text-red-600 border-b pb-3">
+                <div class="text-2xl sm:text-2xl text-gray-700 mb-5 text-red-800 hover:text-red-600 border-b pb-3">
                     <a href="/blog/{{ $post->slug }}">
                         {{ $post->title }}
                     </a>

@@ -1,8 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Neucha|Cabin+Sketch");
 
 @tailwind base;
-
 @tailwind components;
+
+.bord {
+    border: solid 1px #c05621;
+}
+
 body {
     background-color: #f8f8f8;
 }
@@ -24,44 +28,11 @@ body {
     border-radius: 255px 25px 225px 25px/25px 225px 25px 255px;
 }
 
-.ql-syntax {
-    @apply bg-gray-100 text-base leading-relaxed my-8 p-4 border-2 border-gray-300 border-sketchy-nav;
-}
-
-@import "highlightjs.css";
-
-.sketchy-box {
-    position: relative;
-    border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
-}
-
-
-.sketchy-box:hover::before {
-    border: 2px solid #742a2a;
-    transition: all 0.3s ease-in-out;
-    -webkit-transform: translate3d(-50%, -50%, 0) scale(1.015) rotate(-0.5deg);
-    transform: translate3d(-50%, -50%, 0) scale(1.015) rotate(-0.5deg);
-    border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
-}
-
-.sketchy-box::before {
-    transition: all 0.3s ease-in-out;
-    content: '';
-    border: 2px solid #353535;
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate3d(-50%, -50%, 0) scale(1.015) rotate(0.5deg);
-    transform: translate3d(-50%, -50%, 0) scale(1.015) rotate(0.5deg);
-    border-radius: 1% 1% 2% 4% / 2% 6% 5% 4%;
-}
-
-
 @tailwind utilities;
 
-.bord {
-    border: solid 1px #c05621;
+@import "utilities.scss";
+
+.ql-syntax {
+    @apply bg-gray-100 text-base leading-relaxed my-8 p-4 border-2 border-gray-300 border-sketchy-nav overflow-scroll;
 }
+@import "highlightjs.css";
