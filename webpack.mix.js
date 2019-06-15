@@ -9,4 +9,5 @@ mix.js('resources/js/app.js', 'public/js')
    .purgeCss({
        // Other options are passed through to Purgecss
        whitelistPatterns: [/hljs/ , /ql-syntax/],
-   });
+   })
+   .version();

@@ -5,10 +5,6 @@
         Welcome to my new blog , it's just a beginning, I hope I keep blogging .
     </div>
 
-    {{--<div class="mb-10 p-6 text-2xl font-neucha border-2 border-gray-500 bg-gray-300 border-sketchy-sm">
-        Welcome to my new blog , it's just a beginning, I hope I keep blogging .
-    </div>--}}
-
     <div>
         @foreach($posts as $post)
             <div class="border-2 border-gray-500 border-sketchy-lg p-4 mb-10 shadow-lg bg-white">
