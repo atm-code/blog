@@ -28,7 +28,7 @@
     </div>
 
     <div class="mt-16 mb-10 text-center text-md leading-loose font-neucha">
-        Copyright {{ date('Y') }} - ATM
+        Copyright {{ date('Y') }} - <a class="text-blue-700 font-bold" href="https://atm-code.com/" target="_blank">atm-code</a>
         <br>
         made with ❤️ by
         <a class="text-blue-700 font-bold" href="https://wink.themsaid.com/" target="_blank">Wink</a>
