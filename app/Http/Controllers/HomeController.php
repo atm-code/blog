@@ -20,10 +20,10 @@ class HomeController extends Controller {
 
     public function show($slug)
     {
-        $post = AtmPost::where('slug' , $slug)->first();
+        $post = AtmPost::where('slug' , $slug)->firstOrFail();
 
         views($post)
-            ->delayInSession($post->reading_time)
+            ->delayInSession(now()->addHours(2))
             ->record()
         ;
 
