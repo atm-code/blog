@@ -15,7 +15,8 @@
         "laravel/telescope": "^2.0",
         "laravel/tinker": "^1.0",
         "sentry/sentry-laravel": "1.5.0",
-        "writingink/wink": "^0.1"
+        "writingink/wink": "^0.1",
+        "laravel/ui": "^2.0"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
