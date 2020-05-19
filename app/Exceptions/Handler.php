@@ -4,9 +4,10 @@ namespace App\Exceptions;
 
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Throwable;
 
-class Handler extends ExceptionHandler {
-
+class Handler extends ExceptionHandler
+{
     /**
      * A list of the exception types that are not reported.
      *
@@ -14,12 +15,12 @@ class Handler extends ExceptionHandler {
      */
     protected $dontReport
         = [
-            \Symfony\Component\HttpKernel\Exception\NotFoundHttpException::class ,
-            \Illuminate\Validation\ValidationException::class ,
-            \Illuminate\Auth\AuthenticationException::class ,
-            \Illuminate\Auth\Access\AuthorizationException::class ,
-            \Symfony\Component\HttpKernel\Exception\HttpException::class ,
-            \Illuminate\Database\Eloquent\ModelNotFoundException::class ,
+            \Symfony\Component\HttpKernel\Exception\NotFoundHttpException::class,
+            \Illuminate\Validation\ValidationException::class,
+            \Illuminate\Auth\AuthenticationException::class,
+            \Illuminate\Auth\Access\AuthorizationException::class,
+            \Symfony\Component\HttpKernel\Exception\HttpException::class,
+            \Illuminate\Database\Eloquent\ModelNotFoundException::class,
         ];
 
     /**
@@ -29,19 +30,19 @@ class Handler extends ExceptionHandler {
      */
     protected $dontFlash
         = [
-            'password' ,
-            'password_confirmation' ,
+            'password',
+            'password_confirmation',
         ];
 
     /**
      * Report or log an exception.
      *
-     * @param \Exception $exception
+     * @param  \Throwable  $exception
      * @return void
      */
-    public function report(Exception $exception)
+    public function report(Throwable $exception)
     {
-        if(app()->bound('sentry') && $this->shouldReport($exception)) {
+        if (app()->bound('sentry') && $this->shouldReport($exception)) {
             app('sentry')->captureException($exception);
         }
 
@@ -52,11 +53,11 @@ class Handler extends ExceptionHandler {
      * Render an exception into an HTTP response.
      *
      * @param \Illuminate\Http\Request $request
-     * @param \Exception $exception
+     * @param  \Throwable  $exception
      * @return \Illuminate\Http\Response
      */
-    public function render($request , Exception $exception)
+    public function render($request, Throwable $exception)
     {
-        return parent::render($request , $exception);
+        return parent::render($request, $exception);
     }
 }
