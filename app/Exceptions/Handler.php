@@ -5,8 +5,8 @@ namespace App\Exceptions;
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
-class Handler extends ExceptionHandler {
-
+class Handler extends ExceptionHandler
+{
     /**
      * A list of the exception types that are not reported.
      *
@@ -14,12 +14,12 @@ class Handler extends ExceptionHandler {
      */
     protected $dontReport
         = [
-            \Symfony\Component\HttpKernel\Exception\NotFoundHttpException::class ,
-            \Illuminate\Validation\ValidationException::class ,
-            \Illuminate\Auth\AuthenticationException::class ,
-            \Illuminate\Auth\Access\AuthorizationException::class ,
-            \Symfony\Component\HttpKernel\Exception\HttpException::class ,
-            \Illuminate\Database\Eloquent\ModelNotFoundException::class ,
+            \Symfony\Component\HttpKernel\Exception\NotFoundHttpException::class,
+            \Illuminate\Validation\ValidationException::class,
+            \Illuminate\Auth\AuthenticationException::class,
+            \Illuminate\Auth\Access\AuthorizationException::class,
+            \Symfony\Component\HttpKernel\Exception\HttpException::class,
+            \Illuminate\Database\Eloquent\ModelNotFoundException::class,
         ];
 
     /**
@@ -29,8 +29,8 @@ class Handler extends ExceptionHandler {
      */
     protected $dontFlash
         = [
-            'password' ,
-            'password_confirmation' ,
+            'password',
+            'password_confirmation',
         ];
 
     /**
@@ -41,7 +41,7 @@ class Handler extends ExceptionHandler {
      */
     public function report(Exception $exception)
     {
-        if(app()->bound('sentry') && $this->shouldReport($exception)) {
+        if (app()->bound('sentry') && $this->shouldReport($exception)) {
             app('sentry')->captureException($exception);
         }
 
@@ -55,8 +55,8 @@ class Handler extends ExceptionHandler {
      * @param \Exception $exception
      * @return \Illuminate\Http\Response
      */
-    public function render($request , Exception $exception)
+    public function render($request, Exception $exception)
     {
-        return parent::render($request , $exception);
+        return parent::render($request, $exception);
     }
 }
