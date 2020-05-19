@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\AtmPost;
+use Instagram\Api;
+use Instagram\Storage\CacheManager;
 
 class HomeController extends Controller
 {
@@ -13,8 +15,14 @@ class HomeController extends Controller
             ->orderBy('publish_date', 'DESC')
             ->simplePaginate(12);
 
+        $cache = new CacheManager(storage_path('app/Instagram'));
+        $api   = new Api($cache);
+        $api->setUserName('atmonshi');
+        $instagram = $api->getFeed();
+
         return view('blog.index', [
-            'posts' => $posts,
+            'posts'     => $posts,
+            'instagram' => array_slice($instagram->medias,0,6),
         ]);
     }
 
