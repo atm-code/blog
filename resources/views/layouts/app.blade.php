@@ -11,6 +11,7 @@
 
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch&family=IBM+Plex+Mono:ital,wght@1,300&family=Neucha&display=swap" rel="stylesheet">
 
 </head>
 <body class="font-sketch h-screen antialiased leading-none sm:px-6">
@@ -39,8 +40,7 @@
 
 <!-- Scripts -->
 <script src="{{ mix('js/app.js') }}"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
-
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
 @if(!app()->environment('local'))
     <script id="dsq-count-scr" src="//wh-em.disqus.com/count.js" async></script>
 

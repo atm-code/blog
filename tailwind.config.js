@@ -1,5 +1,12 @@
 const defaultConfig = require('tailwindcss/defaultConfig');
 module.exports      = {
+    purge: {
+        content: ['./resources/views/**/*.blade.php'],
+        options: {
+            whitelistPatterns: [/hljs/ , /ql-syntax/],
+        }
+    },
+
   theme: {
     extend: {
       fontFamily: {
