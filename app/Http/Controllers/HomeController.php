@@ -23,7 +23,7 @@ class HomeController extends Controller
         $post = AtmPost::where('slug', $slug)->firstOrFail();
 
         views($post)
-            ->delayInSession(now()->addHours(2))
+            ->cooldown(now()->addHours(2))
             ->record();
 
         return view('blog.show', [

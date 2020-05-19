@@ -3,12 +3,14 @@
 namespace App;
 
 use CyrildeWit\EloquentViewable\Contracts\Viewable as ViewableContract;
-use CyrildeWit\EloquentViewable\Viewable;
+
+use CyrildeWit\EloquentViewable\InteractsWithViews;
+use CyrildeWit\EloquentViewable\Contracts\Viewable;
 use Wink\WinkPost;
 
-class AtmPost extends WinkPost implements ViewableContract
+class AtmPost extends WinkPost implements Viewable
 {
-    use Viewable;
+    use InteractsWithViews;
 
     protected $removeViewsOnDelete = true;
 
