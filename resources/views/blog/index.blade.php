@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="lg:sketchy-box leading-loose sm:sketchy-box-none mb-10 p-6 text-2xl font-neucha border-2 border-gray-500 bg-gray-300 border-sketchy-sm shadow-lg">
+    <div class="lg:sketchy-box leading-loose mb-10 p-6 text-2xl font-neucha border-2 border-gray-500 bg-gray-300 border-sketchy-sm shadow-lg">
         Welcome to my new blog , it's just a beginning, I hope I keep blogging .
     </div>
 
-    <div class="grid grid-cols-3 gap-4">
+    <div class="grid sm:grid-cols-3 gap-1 sm:gap-4">
         <div class="col-span-2">
             @foreach($posts as $post)
                 <div class="border-2 border-gray-500 border-sketchy-lg p-4 mb-10 shadow-lg bg-white">
@@ -37,6 +37,8 @@
                     </div>
                 </div>
             @endforeach
+            {{ $posts->links() }}
+            <br>
         </div>
 
         <div class="col-span-1">
@@ -46,7 +48,7 @@
                         My Instagram feed:
                     </a>
                 </h3>
-                <div class="grid grid-cols-2 gap-4">
+                <div class="grid grid-cols-2 gap-2 sm:gap-4">
                     @foreach($instagram as $feed)
                         <div>
                             <a target="_blank" href="{{ $feed->link ?? '' }}" title="{{ $ffed->caption ?? '' }}">
@@ -72,6 +74,4 @@
         </div>
 
     </div>
-    <br>
-    {{ $posts->links() }}
 @endsection

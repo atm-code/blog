@@ -13,7 +13,7 @@ class HomeController extends Controller
         $posts = AtmPost::with('tags')
             ->live()
             ->orderBy('publish_date', 'DESC')
-            ->simplePaginate(12);
+            ->simplePaginate(3);
 
         $cache = new CacheManager(storage_path('app/Instagram'));
         $api   = new Api($cache);
