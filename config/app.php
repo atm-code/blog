@@ -123,6 +123,8 @@ return [
 
     'cipher' => 'AES-256-CBC',
 
+    'instagram' => 'atmonshi',
+
     /*
     |--------------------------------------------------------------------------
     | Autoloaded Service Providers

@@ -1,8 +1,15 @@
 # blog
-a repo for my personal blog
+a repo for my [personal blog](https://atmonshi.sa)
+-
 
-this is a [laravel](https://laravel.com) app that I use on my [blog](https://atmonshi.sa) , you can use this , it’s just a start for laravel with [Wink](https://www.google.com)
- , and [tailwindCSS](https://tailwindcss.com) for styling .
+# Features
+- [laravel](https://laravel.com) 
+- [wink](https://github.com/themsaid/wink)
+- [tailwindCSS](https://tailwindcss.com) and [tailwindui](https://tailwindui.com)
+- [telescope](https://laravel.com/docs/master/telescope)
+- [eloquent-viewable](https://github.com/cyrildewit/eloquent-viewable)
+- [instagram-user-feed](https://github.com/pgrimaud/instagram-user-feed)
 
-it's also include some useful packages like [telescope](https://laravel.com/docs/5.8/telescope) , [eloquent-viewable](https://github.com/cyrildewit/eloquent-viewable) .
-and some tweaks like reading time and more .
+-
+
+it's also include some tweaks like reading time and [sentry](https://sentry.io) integration .

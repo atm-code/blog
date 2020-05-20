@@ -42,7 +42,7 @@
         </div>
 
         <div class="col-span-1">
-            <div class="border-2 border-gray-500 border-sketchy-sm p-4 mb-10 shadow-lg bg-white pt-8">
+            <div class="border-2 border-gray-500 border-sketchy-lg p-4 mb-10 shadow-lg bg-white pt-8">
                 <h3 class="text-orange-800 text-lg mb-6">
                     <a href="https://www.instagram.com/atmonshi/" target="_blank">
                         My Instagram feed:
@@ -71,6 +71,11 @@
                 </p>
 
             </div>
+
+            <div class="border-2 border-gray-500 border-sketchy-lg p-4 mb-10 shadow-lg bg-white pt-8">
+                <a class="twitter-timeline" data-lang="en" data-height="500" href="https://twitter.com/ATmonshi?ref_src=twsrc%5Etfw">Tweets by ATmonshi</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+
         </div>
 
     </div>

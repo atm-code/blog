@@ -13,11 +13,11 @@ class HomeController extends Controller
         $posts = AtmPost::with('tags')
             ->live()
             ->orderBy('publish_date', 'DESC')
-            ->simplePaginate(3);
+            ->simplePaginate(5);
 
         $cache = new CacheManager(storage_path('app/Instagram'));
         $api   = new Api($cache);
-        $api->setUserName('atmonshi');
+        $api->setUserName(config('app.instagram'));
         $instagram = $api->getFeed();
 
         return view('blog.index', [
