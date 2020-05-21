@@ -3,16 +3,20 @@ module.exports      = {
     purge: {
         content: ['./resources/views/**/*.blade.php'],
         options: {
-            whitelistPatterns: [/hljs/ , /ql-syntax/],
+            whitelistPatterns: [/hljs/, /ql-syntax/],
         }
     },
 
-  theme: {
-    extend: {
-      fontFamily: {
-        'sketch': ['Cabin Sketch'],
-        'neucha': ['Neucha'],
-      },
+    theme: {
+        extend: {
+            fontFamily: {
+                'sketch': ['Cabin Sketch'],
+                'neucha': ['Neucha'],
+            },
+        },
     },
-  },
+
+    plugins: [
+        require('@tailwindcss/ui'),
+    ]
 };

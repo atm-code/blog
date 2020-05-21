@@ -21,14 +21,7 @@
         </div>
     </div>
 
-    <div class="mt-16 bg-white p-3 text-center text-md leading-loose font-neucha">
-        Copyright {{ date('Y') }} - <a class="text-blue-700 font-bold" href="https://atm-code.com/" target="_blank">atm-code</a>
-        <br>
-        made with ❤️ by
-        <a class="text-blue-700 font-bold" href="https://github.com/themsaid/wink" target="_blank">Wink</a>
-        and
-        <a class="text-blue-700 font-bold" href="https://tailwindcss.com" target="_blank">tailwindcss</a>
-    </div>
+    @include('layouts.footer')
 
     <!-- Scripts -->
     <script src="{{ mix('js/app.js') }}"></script>

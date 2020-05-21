@@ -1,4 +1,4 @@
-<nav class="bord mb-12 my-5 mx-4 md:mx-0 italic p-3 border-2 border-green-800 border-sketchy-nav">
+<nav class="bord mb-12 my-5 mx-4 md:mx-0 italic p-3 border-2 border-gray-800 border-sketchy-nav">
     <div class="w-2/3 mx-auto px-6 md:px-0">
         <div class="flex items-center justify-center">
             <div class="flex items-center flex-shrink-0 mr-6 sm:mr-0">
