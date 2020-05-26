@@ -12,6 +12,7 @@ class HomeController extends Controller
     public function index()
     {
         $posts = AtmPost::with('tags')
+            ->live()
             ->orderBy('publish_date', 'DESC')
             ->simplePaginate(5);
 
