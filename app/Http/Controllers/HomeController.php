@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\AtmPost;
+use App\Models\AtmPage;
+use App\Models\AtmPost;
 use Instagram\Api;
 use Instagram\Storage\CacheManager;
 
@@ -11,7 +12,6 @@ class HomeController extends Controller
     public function index()
     {
         $posts = AtmPost::with('tags')
-            ->live()
             ->orderBy('publish_date', 'DESC')
             ->simplePaginate(5);
 
@@ -36,6 +36,13 @@ class HomeController extends Controller
 
         return view('blog.show', [
             'post' => $post,
+        ]);
+    }
+
+    public function page($slug)
+    {
+        return view('page.index', [
+            'page'     => AtmPage::whereSlug($slug)->firstOrFail(),
         ]);
     }
 }

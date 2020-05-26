@@ -1,19 +1,9 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
-use CyrildeWit\EloquentViewable\Contracts\Viewable as ViewableContract;
-
-use CyrildeWit\EloquentViewable\InteractsWithViews;
-use CyrildeWit\EloquentViewable\Contracts\Viewable;
-use Wink\WinkPost;
-
-class AtmPost extends WinkPost implements Viewable
+trait readable
 {
-    use InteractsWithViews;
-
-    protected $removeViewsOnDelete = true;
-
     public function getReadingTimeAttribute()
     {
         return $this->readingTime($this);
