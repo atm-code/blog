@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Alaouy\Youtube\Facades\Youtube;
 use App\Models\AtmPage;
 use App\Models\AtmPost;
 use Instagram\Api;
@@ -17,12 +18,13 @@ class HomeController extends Controller
             ->simplePaginate(5);
 
         $cache = new CacheManager(storage_path('app/Instagram'));
-        $api   = new Api($cache);
+        $api   = (new Api($cache));
         $api->setUserName(config('app.instagram'));
         $instagram = $api->getFeed();
 
         return view('blog.index', [
             'posts'     => $posts,
+            'youtube'     => Youtube::listChannelVideos(config('app.youtubeChannelID'), 40),
             'instagram' => array_slice($instagram->medias,0,6),
         ]);
     }
