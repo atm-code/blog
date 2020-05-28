@@ -1,4 +1,4 @@
-<nav class="hidden mb-12 my-5 mx-4 md:mx-0 italic p-3 border-2 border-gray-800 border-sketchy-nav">
+<nav class="hidden mb-12 my-5 mx-4 md:mx-0 italic p-3 border-2 border-gray-800 border-sketchy-md hover:border-sketchy-lg transition duration-700 ease-in-out">
     <div class="w-2/3 mx-auto px-6 md:px-0">
         <div class="flex items-center justify-center">
             <div class="flex items-center flex-shrink-0 mr-6 sm:mr-0">
@@ -37,7 +37,7 @@
     </div>
 </nav>
 
-<div x-data="{ open: false }" class="z-0 relative mb-6 mt-2 italic border-2 border-gray-300 border-sketchy-nav bg-white">
+<div x-data="{ open: false }" class="z-0 relative mb-6 mt-2 italic border-2 border-gray-300 border-sketchy-md hover:border-sketchy-lg transition duration-700 ease-in-out bg-white">
     <div class="relative z-10">
         <div class="max-w-7xl mx-auto flex justify-between items-center px-4 py-5 sm:px-6 sm:py-4 lg:px-8 md:justify-start md:space-x-10">
             <div>

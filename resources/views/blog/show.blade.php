@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="bg-white p-4 border-sketchy-lg shadow">
+    <div class="bg-white p-4 border-sketchy-lg hover:border-sketchy-md transition duration-700 ease-in-out shadow">
         <div class="clearfix mb-5">
             <div class="leading-loose font-semibold float-left text-gray-700 text-4xl">
                 {{ $post->title }}

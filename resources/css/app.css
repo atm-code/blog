@@ -9,25 +9,6 @@ body {
     background-color: #f8f8f8;
 }
 
-
-
-.border-sketchy-nav {
-    border-radius: 25px 25px 55px 5px/5px 55px 25px 25px;
-}
-
-.border-sketchy-lg {
-    border-radius: 555px 25px 15px 25px/25px 5px 35px 555px;
-    transition: all 0.3s ease-in-out;
-}
-
-.border-sketchy-sm {
-    border-radius: 255px 25px 225px 25px/25px 225px 25px 255px;
-}
-
-.border-sketchy-lg:hover {
-    border-radius: 255px 25px 225px 25px/25px 225px 25px 255px;
-}
-
 @responsive {
     .sketchy-box {
         position: relative;
@@ -64,9 +45,8 @@ body {
 }
 
 .ql-syntax {
-    @apply bg-gray-100 text-base leading-relaxed my-8 p-4 border-2 border-gray-300 border-sketchy-nav;
+    @apply bg-gray-100 text-base leading-relaxed my-8 p-4 border-2 border-gray-300 border-sketchy-md;
     font-family: 'IBM Plex Mono', monospace;
-    /*font-family: 'Fira Code', monospace;*/
 }
 @import "highlightjs.css";
 

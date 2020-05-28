@@ -1,5 +1,11 @@
 const defaultConfig = require('tailwindcss/defaultConfig');
+const plugin = require('tailwindcss/plugin')
+
 module.exports      = {
+    variants: {
+        borderSketchy: ['responsive', 'hover'],
+    },
+
     purge: {
         content: ['./resources/views/**/*.blade.php'],
         options: {
@@ -16,7 +22,10 @@ module.exports      = {
         },
     },
 
+
     plugins: [
         require('@tailwindcss/ui'),
+        require('tailwindcss-border-sketch')(),
     ]
 };
+
