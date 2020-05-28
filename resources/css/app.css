@@ -50,4 +50,11 @@ body {
 }
 @import "highlightjs.css";
 
+.blog-content a{
+    @apply text-red-400
+}
+.blog-content a:hover{
+    @apply text-red-600 transition duration-300
+}
+
 @tailwind utilities;
