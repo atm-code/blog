@@ -123,7 +123,9 @@ return [
 
     'cipher' => 'AES-256-CBC',
 
-    'instagram' => 'atmonshi',
+    'instagramAccount' => env('INSTAGRAM_ACCOUNT', 'username'),
+    'instagramUsername' => env('INSTAGRAM_USERNAME', 'username'),
+    'instagramPassword' => env('INSTAGRAM_PASSWORD', 'password'),
     'youtubeChannelID' => 'UCHPToC3q9Nzs-VEEwsa6AMw',
 
     /*
