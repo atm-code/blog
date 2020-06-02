@@ -43,9 +43,17 @@ class HomeController extends Controller
             $profile   = $api->getProfile(config('app.instagramAccount'));
             $instagram = $profile->getMedias();
         } catch (InstagramException $e) {
+            logger()->error('Unknown foo returned from the example service', [
+                'foo' => 'bar',
+                'user_id' => auth()->user()->getAuthIdentifier()
+            ]);
             Log::emergency($e->getMessage());
             $instagram = [];
         } catch (CacheException $e) {
+            logger()->error('Unknown foo returned from the example service', [
+                'foo' => 'bar',
+                'user_id' => auth()->user()->getAuthIdentifier()
+            ]);
             Log::emergency($e->getMessage());
             $instagram = [];
         }
