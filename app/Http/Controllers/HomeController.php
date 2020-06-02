@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Alaouy\Youtube\Facades\Youtube;
 use App\Models\AtmPage;
 use App\Models\AtmPost;
+use Illuminate\Support\Facades\Log;
 use Instagram\Api;
 use Instagram\Exception\InstagramException;
 use Psr\Cache\CacheException;
@@ -42,8 +43,10 @@ class HomeController extends Controller
             $profile   = $api->getProfile(config('app.instagramAccount'));
             $instagram = $profile->getMedias();
         } catch (InstagramException $e) {
+            Log::emergency($e->getMessage());
             $instagram = [];
         } catch (CacheException $e) {
+            Log::emergency($e->getMessage());
             $instagram = [];
         }
 
