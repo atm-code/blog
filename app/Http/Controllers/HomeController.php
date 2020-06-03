@@ -45,14 +45,14 @@ class HomeController extends Controller
         } catch (InstagramException $e) {
             logger()->error('Unknown foo returned from the example service', [
                 'foo' => 'bar',
-                'user_id' => auth()->user()->getAuthIdentifier()
+                'user_id' => 1
             ]);
             Log::emergency($e->getMessage());
             $instagram = [];
         } catch (CacheException $e) {
             logger()->error('Unknown foo returned from the example service', [
                 'foo' => 'bar',
-                'user_id' => auth()->user()->getAuthIdentifier()
+                'user_id' => 1
             ]);
             Log::emergency($e->getMessage());
             $instagram = [];
