@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title')
+    {{ $page->title ?? '' }}
+@endsection
+
 @section('content')
     <div class="bg-white p-4 border-sketchy-lg hover:border-sketchy-md transition duration-700 ease-in-out shadow">
         <div class="clearfix mb-5">

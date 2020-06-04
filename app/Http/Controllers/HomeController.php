@@ -76,8 +76,14 @@ class HomeController extends Controller
 
     public function page($slug)
     {
+        $page = AtmPage::whereSlug($slug)->firstOrFail();
+
+        views($page)
+            ->cooldown(now()->addHours(2))
+            ->record();
+
         return view('page.index', [
-            'page' => AtmPage::whereSlug($slug)->firstOrFail(),
+            'page' => $page,
         ]);
     }
 }
