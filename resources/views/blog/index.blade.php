@@ -22,6 +22,17 @@
             <div class="border-2 border-gray-500 border-sketchy-lg hover:border-sketchy-md transition duration-700 ease-in-out p-4 mb-10 shadow-lg bg-white pt-8">
                 @include('blog.index.youtube')
             </div>
+
+            <div class="border-2 border-gray-500 border-sketchy-lg hover:border-sketchy-md transition duration-700 ease-in-out p-2 mb-10 shadow-lg bg-gray-500">
+                {{--<a href="https://geo.music.apple.com/profile/atmonshi?itscg=80100&amp;itsct=pla_catchall_assettool_30less&amp;ls=1"
+                   class="inline-block overflow-hidden rounded-md w-48 h-40">
+                    <img src="https://tools.applemediaservices.com/api/badges/app-icon-music/standard/en-US?size=83x83" alt="App Icon Apple Music"
+                         style="border-radius: 13px; width: 83px; height: 83px;">
+                </a>
+                ss--}}
+                <iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/playlist/flying-high/pl.u-ABBaC7Gv9Mo"></iframe>
+
+            </div>
         </div>
 
     </div>
