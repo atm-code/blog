@@ -21,9 +21,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch&family=IBM+Plex+Mono:ital,wght@1,300&family=Neucha&display=swap" rel="stylesheet">
 </head>
 <body class="font-sketch h-screen antialiased leading-none">
-
     <div id="app" class="sm:px-6">
         @include('layouts.nav')
+
+        @include('cookieConsent::index')
 
         <div class="w-full sm:w-1/3 md:w-full lg:w-full xl:w-2/3 mx-auto px-5">
             @yield('content')

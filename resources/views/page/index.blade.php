@@ -32,7 +32,7 @@
             </div>
         @endif
 
-        <div class="pl-5 mb-5 text-2xl leading-relaxed font-neucha">
+        <div class="pl-5 mb-5 text-2xl leading-relaxed font-neucha blog-content">
             {!! $page->body !!}
         </div>
 

@@ -20,6 +20,7 @@
         "laravel/ui": "^2.0",
         "pgrimaud/instagram-user-feed": "^6.0",
         "sentry/sentry-laravel": "^1.7",
+        "spatie/laravel-cookie-consent": "^2.12",
         "symfony/cache": "^5.1",
         "themsaid/wink": "^1.0"
     },

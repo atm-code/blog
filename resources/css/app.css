@@ -57,4 +57,12 @@ body {
     @apply text-red-600 transition duration-300
 }
 
+.blog-content h2{
+    @apply text-green-400
+}
+
+.blog-content ul{
+    @apply pl-6 list-inside  list-disc
+}
+
 @tailwind utilities;
