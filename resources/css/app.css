@@ -44,25 +44,6 @@ body {
     }
 }
 
-.ql-syntax {
-    @apply bg-gray-100 text-base leading-relaxed my-8 p-4 border-2 border-gray-300 border-sketchy-md;
-    font-family: 'IBM Plex Mono', monospace;
-}
 @import "highlightjs.css";
-
-.blog-content a{
-    @apply text-red-400
-}
-.blog-content a:hover{
-    @apply text-red-600 transition duration-300
-}
-
-.blog-content h2{
-    @apply text-green-400
-}
-
-.blog-content ul{
-    @apply pl-6 list-inside  list-disc
-}
 
 @tailwind utilities;
