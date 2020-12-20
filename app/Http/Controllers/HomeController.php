@@ -22,15 +22,15 @@ class HomeController extends Controller
             ->simplePaginate(5);
 
         // Instagram
-        $instagram = array_slice($this->instagram(), 0, 6);
+        //$instagram = array_slice($this->instagram(), 0, 6);
 
         // youtube
         $youtube = Youtube::listChannelVideos(config('app.youtubeChannelID'), 6, 'date');
 
         return view('blog.index', [
-            'posts'     => $posts,
-            'youtube'   => $youtube,
-            'instagram' => $instagram,
+            'posts'   => $posts,
+            'youtube' => $youtube,
+            //'instagram' => $instagram,
         ]);
     }
 

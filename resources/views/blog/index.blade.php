@@ -11,9 +11,9 @@
         </div>
 
         <div class="col-span-1">
-            <div class="border-2 border-gray-500 border-sketchy-lg hover:border-sketchy-md transition duration-700 ease-in-out p-4 mb-10 shadow-lg bg-white pt-8">
+            {{--<div class="border-2 border-gray-500 border-sketchy-lg hover:border-sketchy-md transition duration-700 ease-in-out p-4 mb-10 shadow-lg bg-white pt-8">
                 @include('blog.index.instagram')
-            </div>
+            </div>--}}
 
             <div class="border-2 border-gray-500 border-sketchy-lg hover:border-sketchy-md transition duration-700 ease-in-out p-4 mb-10 shadow-lg bg-white pt-8">
                 <a class="twitter-timeline" data-lang="en" data-height="500" href="https://twitter.com/ATmonshi?ref_src=twsrc%5Etfw">Tweets by ATmonshi</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
