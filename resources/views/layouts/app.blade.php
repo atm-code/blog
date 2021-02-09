@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <script data-ad-client="ca-pub-3109343787262251" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-
     <title>
         @if(trim($__env->yieldContent('title')))
             @yield('title') -
@@ -38,7 +36,6 @@
     <script src="{{ mix('js/app.js') }}"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
     @if(!app()->environment('local'))
-        <script id="dsq-count-scr" src="//wh-em.disqus.com/count.js" async></script>
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-376141-13"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
