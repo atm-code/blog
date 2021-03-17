@@ -1,4 +1,4 @@
-<h3 class="text-orange-800 text-lg mb-6">
+<h3 class="text-orange-800 text-lg leading-normal mb-6">
     <a href="https://www.instagram.com/atmonshi/" target="_blank">
         My favorites TV Shows calendar:
     </a>

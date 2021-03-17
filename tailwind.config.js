@@ -4,10 +4,13 @@ const plugin = require('tailwindcss/plugin')
 module.exports      = {
     variants: {
         borderSketchy: ['responsive', 'hover'],
+        fontWeight: ['hover', 'focus'],
     },
 
     purge: {
-        content: ['./resources/views/**/*.blade.php'],
+        content: [
+            './resources/views/**/*.blade.php'
+        ],
         options: {
             whitelistPatterns: [/hljs/, /ql-syntax/],
         }
@@ -34,9 +37,7 @@ module.exports      = {
         },
     },
 
-
     plugins: [
-        require('@tailwindcss/ui'),
         require('tailwindcss-border-sketch')(),
         require('@tailwindcss/typography'),
     ]

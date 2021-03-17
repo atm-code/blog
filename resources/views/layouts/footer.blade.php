@@ -1,7 +1,7 @@
 <div class="bg-white">
     <div class="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
         <div class="flex flex-grow justify-center md:order-2">
-            
+
         </div>
         <div class="flex justify-center md:order-2">
             <a target="_blank" href="http://www.youtube.com/c/ashrafmonshi" class="text-gray-400 hover:text-gray-500 transition duration-200">
@@ -29,7 +29,7 @@
         </div>
         <div class="mt-8 md:mt-0 md:order-1">
             <p class="text-center text-base leading-6 text-gray-400">
-                <span class="text-lg">&copy;</span> {{ date('Y') }} <a class="text-blue-400 font-bold" href="https://atm-code.com/" target="_blank">atm-code</a>.
+                <span class="text-lg leading-normal">&copy;</span> {{ date('Y') }} <a class="text-blue-400 font-bold" href="https://atm-code.com/" target="_blank">atm-code</a>.
                 All rights reserved.
                 <br>
                 made with ❤️ by

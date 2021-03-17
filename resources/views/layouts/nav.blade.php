@@ -42,7 +42,7 @@
                         Sign in
                     </a>
                     <span class="inline-flex rounded-md shadow-sm">
-                        <a href="#" class="inline-flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150">
+                        <a href="#" class="inline-flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:ring-indigo active:bg-indigo-700 transition ease-in-out duration-150">
                             Sign up
                         </a>
                     </span>
@@ -53,7 +53,7 @@
 
     <div x-show="open" @click.away="open = false" class="absolute z-20  top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
         <div class="rounded-lg shadow-lg">
-            <div class="rounded-lg shadow-xs bg-white divide-y-2 divide-gray-50">
+            <div class="rounded-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
                 <div class="pt-5 pb-6 px-5 space-y-6 sm:space-y-8 sm:pb-8">
                     <div class="flex items-center justify-between">
                         <div>
