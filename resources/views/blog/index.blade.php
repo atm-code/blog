@@ -10,7 +10,7 @@
             @include('blog.index.posts')
         </div>
 
-        <div class="sm:col-span-2 col-span-1">
+        <div class="col-span-2 md:col-span-1 lg:col-span-1 xl:col-span-1">
             {{--<div class="border-2 border-gray-500 border-sketchy-lg hover:border-sketchy-md transition duration-700 ease-in-out p-4 mb-10 shadow-lg bg-white pt-8">
                 @include('blog.index.instagram')
             </div>--}}
