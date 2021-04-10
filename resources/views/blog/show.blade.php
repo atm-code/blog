@@ -28,12 +28,12 @@
 
         @if($post->featured_image)
             <div class="w-full mb-10">
-                <img class="object-cover h-48 w-full" src="{{ $post->featured_image ?? '' }}">
+                <img alt="{{ $post->title ?? '' }}" class="object-cover h-50 w-full" src="{{ $post->featured_image ?? '' }}">
                 <p class="pt-3 text-gray-700 font-neucha italic ml-4">{!! $post->featured_image_caption !!}</p>
             </div>
         @endif
 
-        <div class="pl-5 mb-5 text-2xl leading-relaxed font-neucha prose lg:prose-2xl">
+        <div class="pl-5 mb-8 font-neucha prose prose-2xl prose-red">
             {!! $post->body !!}
         </div>
 

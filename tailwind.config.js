@@ -17,18 +17,6 @@ module.exports      = {
     },
 
     theme: {
-        typography: {
-            default: {
-                css: {
-                    a: {
-                        color: '#fc8181',
-                        '&:hover': {
-                            color: '#c53030',
-                        },
-                    },
-                },
-            },
-        },
         extend: {
             fontFamily: {
                 'sketch': ['Cabin Sketch'],
