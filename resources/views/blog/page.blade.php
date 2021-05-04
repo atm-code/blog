@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
 @section('title')
-    {{ $post->title ?? '' }}
+    {{ $page->title ?? '' }}
 @endsection
 
 @section('content')
     <?php
-    $excerpt = explode('===',$post->excerpt);
+    $excerpt = explode('===',$page->excerpt);
     $caption = ($excerpt[0]) ?? '';
     $finalExcerpt = ($excerpt[1]) ?? '';
     $allOldMeta = ($excerpt[2]) ?? '';
@@ -15,20 +15,14 @@
     <div class="bg-white p-4 border-sketchy-lg hover:border-sketchy-md transition duration-700 ease-in-out shadow">
         <div class="flow-root mb-5">
             <div class="leading-loose font-semibold float-left text-gray-700 text-4xl">
-                {{ $post->title ?? '' }}
-                @foreach($post->taxonomies as $taxonomies)
-                    <a href="{{ url('/cat/'.$taxonomies->term->slug) }}"
-                       class="cursor-pointer brush inline-flex items-center px-4 py-1.5 rounded-full text-sm font-medium text-silver-900 hover:text-light-blue-900 transition duration-700 ease-in-out">
-                        {{ $taxonomies->term->name ?? '' }}
-                    </a>
-                @endforeach
+                {{ $page->title ?? '' }}
             </div>
             <div class="leading-loose float-right pt-2 text-gray-700">
-                {!! $post->reading_time_desc !!} reading
+                {!! $page->reading_time_desc !!} reading
                 <span class="text-base">&nbsp;~&nbsp;</span>
-                {{ views($post)->count() }} visits
+                {{ views($page)->count() }} visits
                 <br>
-                On: {{ $post->post_date->format('Y/m/d - h:i a') }}
+                On: {{ $page->created_at->format('Y/m/d - h:i a') }}
             </div>
         </div>
 
@@ -43,14 +37,8 @@
             </div>
         @endif
 
-        <div class="pl-5 mb-8 font-neucha text-3xl leading-relaxed tracking-wide {{--prose prose-2xl prose-light-blue--}}">
-            {!! $post->post_content !!}
+        <div class="pl-5 mb-8 font-neucha prose prose-2xl text-3xl leading-relaxed tracking-wide prose-light-blue">
+            {!! $page->post_content !!}
         </div>
-
-        @if(!app()->environment('local'))
-            <br>
-            <div class="border-t mt-8 mb-4"></div>
-            <br>
-        @endif
     </div>
 @endsection

@@ -1,0 +1,18 @@
+.blocks-gallery-grid {
+    @apply grid grid-cols-3 gap-4;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: masonry;
+}
+.blocks-gallery-item figure {
+    margin: 0;
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
+.blocks-gallery-item {
+
+}
+.blocks-gallery-item figure img {
+    @apply w-full h-full;
+    grid-row: 1 / -1;
+    grid-column: 1;
+}

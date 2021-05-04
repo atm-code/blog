@@ -33,7 +33,7 @@
                 All rights reserved.
                 <br>
                 made with ❤️ by
-                <a class="text-blue-400 font-bold" href="https://github.com/themsaid/wink" target="_blank">Wink</a>
+                <a class="text-blue-400 font-bold" href="https://Laravel.com" target="_blank">Laravel</a>
                 and
                 <a class="text-blue-400 font-bold" href="https://tailwindcss.com" target="_blank">tailwindcss</a>
             </p>

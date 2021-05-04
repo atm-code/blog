@@ -18,8 +18,9 @@
 
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch&family=IBM+Plex+Mono:ital,wght@1,300&family=Neucha&display=swap" rel="stylesheet">
+
 </head>
-<body class="font-sketch h-screen antialiased leading-none">
+<body class="font-sketch h-screen antialiased leading-none pt-10 px-0 mx-0 bg-mint-400" style="background-image: url('{{ asset('images/bg.png') }} '); background-repeat: repeat-x">
     <div id="app" class="sm:px-6">
         @include('layouts.nav')
 
