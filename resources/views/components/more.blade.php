@@ -4,7 +4,7 @@
     </div>
     <div class="relative flex items-center justify-between">
         <div class="sm:brush brush my-4 w-full sm:w-1/4 p-8 ">
-            <p class="text-5xl sm:pl-10 pl-2">{{ $title }}</p>
+            <a @if(isset($link)) href="{{ $link }}" @endif class="text-5xl sm:pl-10 pl-2">{{ $title }}</a>
         </div>
 
         @if(isset($link))
