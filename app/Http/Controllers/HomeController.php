@@ -30,15 +30,22 @@ class HomeController extends Controller
             ->type('post')
             ->published()->take(4)->get();
 
-        $youtube = ( app()->isLocal() ) ? collect() : Youtube::listChannelVideos(config('app.youtubeChannelID'), 9, 'date');
-        //$youtube = Youtube::listChannelVideos(config('app.youtubeChannelID'), 9, 'date');
+        if (app()->isLocal()) {
+            $youtube = collect();
+        } else {
+            try {
+                $youtube = Youtube::listChannelVideos(config('app.youtubeChannelID'), 9, 'date');
+            } catch (\Exception $error) {
+                $youtube = collect();
+            }
+        }
 
         return view('blog.index', [
-            'devPosts'  => $devPosts,
-            'lifePosts' => $lifePosts,
+            'devPosts'   => $devPosts,
+            'lifePosts'  => $lifePosts,
             'otherPosts' => $otherPosts,
-            'vlogPosts' => $vlogPosts,
-            'youtube'   => $youtube,
+            'vlogPosts'  => $vlogPosts,
+            'youtube'    => $youtube,
         ]);
     }
 
@@ -77,7 +84,7 @@ class HomeController extends Controller
 
         return view('blog.cat', [
             'getCat' => $getCat,
-            'posts' => $posts,
+            'posts'  => $posts,
         ]);
     }
 }
