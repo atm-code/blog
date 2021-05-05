@@ -23,16 +23,16 @@
             </div>
             <div class="hidden md:flex-1 md:flex md:items-center md:justify-between md:space-x-12">
                 <nav class="flex space-x-10">
-                    <a href="{{ url('get-to-know-me') }}" class="@if(request()->is('get-to-know-me')) text-gray-900 @else text-silver-900 @endif text-xl leading-6 font-medium hover:text-mint-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
+                    <a href="{{ url('get-to-know-me') }}" class="@if(request()->is('get-to-know-me')) text-gray-900 @else text-silver-900 @endif px-4 py-2 brush text-xl leading-6 font-medium hover:text-mint-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
                         Get to Know Me
                     </a>
-                    <a href="{{ url('contact-me') }}" class="@if(request()->is('contact-me')) text-gray-900 @else text-silver-900 @endif text-xl leading-6 font-medium hover:text-mint-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
+                    <a href="{{ url('contact-me') }}" class="@if(request()->is('contact-me')) text-gray-900 @else text-silver-900 @endif px-4 py-2 brush text-xl leading-6 font-medium hover:text-mint-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
                         Contact Me
                     </a>
-                    <a href="{{ url('career') }}" class="@if(request()->is('career')) text-gray-900 @else text-silver-900 @endif text-xl leading-6 font-medium hover:text-mint-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
+                    <a href="{{ url('career') }}" class="@if(request()->is('career')) text-gray-900 @else text-silver-900 @endif px-4 py-2 brush text-xl leading-6 font-medium hover:text-mint-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
                         Career
                     </a>
-                    <a href="{{ url('my-uses') }}" class="@if(request()->is('my-uses')) text-gray-900 @else text-silver-900 @endif text-xl leading-6 font-medium hover:text-mint-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
+                    <a href="{{ url('my-uses') }}" class="@if(request()->is('my-uses')) text-gray-900 @else text-silver-900 @endif px-4 py-2 brush text-xl leading-6 font-medium hover:text-mint-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
                         Uses
                     </a>
                 </nav>

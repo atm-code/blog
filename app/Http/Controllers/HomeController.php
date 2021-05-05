@@ -30,7 +30,8 @@ class HomeController extends Controller
             ->type('post')
             ->published()->take(4)->get();
 
-        $youtube = ( app()->isLocal() ) ? collect() : Youtube::listChannelVideos(config('app.youtubeChannelID'), 6, 'date');
+        $youtube = ( app()->isLocal() ) ? collect() : Youtube::listChannelVideos(config('app.youtubeChannelID'), 9, 'date');
+        //$youtube = Youtube::listChannelVideos(config('app.youtubeChannelID'), 9, 'date');
 
         return view('blog.index', [
             'devPosts'  => $devPosts,
@@ -67,8 +68,16 @@ class HomeController extends Controller
 
     public function cat($cat)
     {
+        $getCat = Taxonomy::category()->slug($cat)->first();
+
+        $posts = AtmPost::newest()
+            ->taxonomy('category', $cat)
+            ->type('post')
+            ->published()->get();
+
         return view('blog.cat', [
-            'posts' => Taxonomy::category()->slug($cat)->with('posts')->first(),
+            'getCat' => $getCat,
+            'posts' => $posts,
         ]);
     }
 }

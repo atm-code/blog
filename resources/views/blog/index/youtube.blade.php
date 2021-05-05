@@ -3,7 +3,7 @@
         My Youtube Channel:
     </a>
 </h3>
-<div class="grid grid-cols-2 gap-2 sm:gap-4">
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-4">
     @foreach($youtube as $you)
         <div>
             <a target="_blank" href="https://www.youtube.com/watch?v={{ $you->id->videoId }}" title="{{ $you->snippet->title ?? '' }}">
