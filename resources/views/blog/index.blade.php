@@ -9,7 +9,7 @@
 
     <div class="w-full border-t border-gray-300 mb-10"></div>
 
-    <x-more :title="'Other Stuff'"/>
+    <x-more :title="'Social'"/>
 
     <div class="grid sm:grid-cols-2 grid-cols-1 sm:gap-4 gap-0">
         {{--<div class="border-2 border-gray-500 border-sketchy-lg hover:border-sketchy-md transition duration-700 ease-in-out p-4 mb-10 shadow-lg bg-white pt-8">

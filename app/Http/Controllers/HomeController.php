@@ -20,11 +20,23 @@ class HomeController extends Controller
             ->type('post')
             ->published()->take(4)->get();
 
+        $otherPosts = AtmPost::newest()
+            ->taxonomy('category', 'other-talks')
+            ->type('post')
+            ->published()->take(4)->get();
+
+        $vlogPosts = AtmPost::newest()
+            ->taxonomy('category', 'vlog')
+            ->type('post')
+            ->published()->take(4)->get();
+
         $youtube = ( app()->isLocal() ) ? collect() : Youtube::listChannelVideos(config('app.youtubeChannelID'), 6, 'date');
 
         return view('blog.index', [
             'devPosts'  => $devPosts,
             'lifePosts' => $lifePosts,
+            'otherPosts' => $otherPosts,
+            'vlogPosts' => $vlogPosts,
             'youtube'   => $youtube,
         ]);
     }

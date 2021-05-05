@@ -11,3 +11,17 @@
         <x-post :post="$post"/>
     @endforeach
 </div>
+
+<x-more :link="url('/cat/other-talks')" :title="'Other Talks'"/>
+<div class="grid sm:grid-cols-4 grid-cols-1 sm:gap-4 gap-0 items-stretch sm:p-4 p-2">
+    @foreach($otherPosts as $post)
+        <x-post :post="$post"/>
+    @endforeach
+</div>
+
+<x-more :link="url('/cat/vlog')" :title="'Vlog'"/>
+<div class="grid sm:grid-cols-4 grid-cols-1 sm:gap-4 gap-0 items-stretch sm:p-4 p-2">
+    @foreach($vlogPosts as $post)
+        <x-post :post="$post"/>
+    @endforeach
+</div>
