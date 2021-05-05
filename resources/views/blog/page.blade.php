@@ -21,11 +21,11 @@
 
         <div class="border-t -mt-4 mb-4"></div>
 
-        @if($post->thumbnail !== null)
-            <div class="border-sketchy-md mb-10 relative h-96 w-full flex items-end justify-start text-left bg-cover bg-center" style="background-image:url('{{ $post->image_url }}');">
+        @if($page->thumbnail !== null)
+            <div class="border-sketchy-md mb-10 relative h-96 w-full flex items-end justify-start text-left bg-cover bg-center" style="background-image:url('{{ $page->image_url }}');">
                 <div class="absolute top-0 mt-20 right-0 bottom-0 left-0 bg-gradient-to-b via-transparent from-transparent to-silver-800"></div>
                 <div class="absolute bottom-2.5 right-0 left-0 mx-5 mt-2 flex justify-between items-center">
-                    <p class="bottom-0 relative left-0 pt-3 text-mint text-lg font-neucha italic ml-4 prose prose-mint">{!! $post->image_alt !!}</p>
+                    <p class="bottom-0 relative left-0 pt-3 text-mint text-lg font-neucha italic ml-4 prose prose-mint">{!! $page->image_alt !!}</p>
                 </div>
             </div>
         @endif

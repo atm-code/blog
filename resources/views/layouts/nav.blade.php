@@ -1,7 +1,7 @@
 <div x-data="{ open: false }" class="z-0 relative mb-6 mt-2 italic border-2 border-gray-500 border-sketchy-md hover:border-sketchy-lg transition duration-700 ease-in-out container mx-auto">
     <div class="relative z-10">
-        <div class="max-w-7xl mx-auto flex justify-between items-center px-4 py-5 sm:px-6 sm:py-4 lg:px-8 md:justify-start md:space-x-10">
-            <div>
+        <div class="flex justify-between items-center px-4 py-5 sm:px-6 sm:py-4 lg:px-8 md:justify-start md:space-x-10">
+            <div class="mr-10">
                 <a href="{{ url('/') }}" class="flex">
                     <svg class="fill-current text-red-900 w-8 h-8 md:w-5 md-h:5 sm:h-8 sm:w-8 lg:h-auto lg:w-10 mr-2 " version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400.000000 400.000000">
                         <g transform="translate(0.000000,400.000000) scale(0.100000,-0.100000)" stroke="none">
@@ -23,16 +23,16 @@
             </div>
             <div class="hidden md:flex-1 md:flex md:items-center md:justify-between md:space-x-12">
                 <nav class="flex space-x-10">
-                    <a href="{{ url('get-to-know-me') }}" class="@if(request()->is('get-to-know-me')) text-gray-900 @else text-silver-900 @endif px-4 py-2 brush text-xl leading-6 font-medium hover:text-mint-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
+                    <a href="{{ url('get-to-know-me') }}" class="@if(request()->is('get-to-know-me')) text-silver-900 font-bold @else text-silver-900 @endif px-4 py-2 brush text-xl leading-6 font-medium hover:text-silver-700 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
                         Get to Know Me
                     </a>
-                    <a href="{{ url('contact-me') }}" class="@if(request()->is('contact-me')) text-gray-900 @else text-silver-900 @endif px-4 py-2 brush text-xl leading-6 font-medium hover:text-mint-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
+                    <a href="{{ url('contact-me') }}" class="@if(request()->is('contact-me')) text-silver-900 font-bold @else text-silver-900 @endif px-4 py-2 brush text-xl leading-6 font-medium hover:text-silver-700 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
                         Contact Me
                     </a>
-                    <a href="{{ url('career') }}" class="@if(request()->is('career')) text-gray-900 @else text-silver-900 @endif px-4 py-2 brush text-xl leading-6 font-medium hover:text-mint-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
+                    <a href="{{ url('career') }}" class="@if(request()->is('career')) text-silver-900 font-bold @else text-silver-900 @endif px-4 py-2 brush text-xl leading-6 font-medium hover:text-silver-700 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
                         Career
                     </a>
-                    <a href="{{ url('my-uses') }}" class="@if(request()->is('my-uses')) text-gray-900 @else text-silver-900 @endif px-4 py-2 brush text-xl leading-6 font-medium hover:text-mint-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
+                    <a href="{{ url('my-uses') }}" class="@if(request()->is('my-uses')) text-silver-900 font-bold @else text-silver-900 @endif px-4 py-2 brush text-xl leading-6 font-medium hover:text-silver-700 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
                         Uses
                     </a>
                 </nav>
