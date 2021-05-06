@@ -37,11 +37,17 @@
         <div class="pl-5 mb-8 font-neucha prose prose-2xl text-3xl leading-relaxed tracking-wide prose-light-blue">
             {!! $post->post_content !!}
         </div>
-
-        @if(!app()->environment('local'))
-            <br>
-            <div class="border-t mt-8 mb-4"></div>
-            <br>
-        @endif
     </div>
+
+
+    <div class="mt-10">
+        <x-more :link="url('/cat/'.$getCat->slug)" :title="'More ' . $getCat->name"/>
+        <div class="grid sm:grid-cols-4 grid-cols-1 sm:gap-4 gap-0 items-stretch sm:p-4 p-2">
+            @foreach($posts as $post)
+                <x-post :post="$post"/>
+            @endforeach
+        </div>
+    </div>
+
+
 @endsection

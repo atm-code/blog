@@ -53,10 +53,19 @@ class HomeController extends Controller
     {
         $post = AtmPost::slug($slug)->with('taxonomies')->firstOrFail();
 
+        $getCat = $post->taxonomies->first()->term;
+
+        $posts = AtmPost::
+            taxonomy('category', $getCat->slug)
+            ->type('post')
+            ->published()->take(4)->orderByRaw('RAND()')->get();
+
         views($post)->cooldown(now()->addHours(2))->record();
 
         return view('blog.show', [
             'post' => $post,
+            'posts' => $posts,
+            'getCat' => $getCat,
         ]);
     }
 
