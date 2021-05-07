@@ -44,7 +44,7 @@ class AtmPost extends Corcel implements Viewable
     {
         $excerpt = explode('===', $this->excerpt);
 
-        return ( $excerpt[1] ) ?? $post->excerpt;
+        return ( $excerpt[1] ) ?? $this->excerpt;
     }
 
     protected $removeViewsOnDelete = true;
