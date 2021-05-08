@@ -26,7 +26,7 @@
         </div>
 
         <div class="border-2 border-gray-500 border-sketchy-lg hover:border-sketchy-md transition duration-700 ease-in-out p-4 mb-10 shadow-lg bg-white pt-8">
-            <iframe allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="450" style="width:100%;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/playlist/my-fav-from-yt/pl.u-6xrLtZ6dNYj"></iframe>
+            <iframe allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="100" style="width:100%; height: 100%; overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/playlist/my-fav-from-yt/pl.u-6xrLtZ6dNYj"></iframe>
         </div>
 
         <div class="border-2 border-gray-500 border-sketchy-lg hover:border-sketchy-md transition duration-700 ease-in-out p-4 mb-10 shadow-lg bg-white pt-8">
