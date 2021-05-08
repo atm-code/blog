@@ -1,4 +1,4 @@
-<div x-data="{ open: false }" class="z-0 relative mb-6 mt-2 italic border-2 border-gray-500 border-sketchy-md hover:border-sketchy-lg transition duration-700 ease-in-out container mx-auto">
+<div x-data="{ open: false }" class="z-50 relative mb-6 mt-2 italic border-2 border-gray-500 border-sketchy-md hover:border-sketchy-lg transition duration-700 ease-in-out container mx-auto">
     <div class="relative z-10">
         <div class="flex justify-between items-center px-4 py-5 sm:px-6 sm:py-4 lg:px-8 md:justify-start md:space-x-10">
             <div class="mr-10">
@@ -37,15 +37,40 @@
                     </a>
                 </nav>
 
-                <div class="hidden flex items-center space-x-8">
-                    <a href="#" class="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
-                        Sign in
-                    </a>
-                    <span class="inline-flex rounded-md shadow-sm">
-                        <a href="#" class="inline-flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:ring-indigo active:bg-indigo-700 transition ease-in-out duration-150">
-                            Sign up
-                        </a>
-                    </span>
+                <div class="flex items-center space-x-8">
+                    @auth
+                        <div class="mx-auto w-64 text-right">
+
+                            <div x-data="{ open: false }" @keydown.escape.stop="open = false;" @click.away="open = false;" class="relative inline-block text-left z-50">
+                                <div>
+                                    <button type="button" class="transition duration-150 ease-in-out inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-mint-500" id="menu-button" x-ref="button"
+                                            @click="open = true;" aria-expanded="false" aria-haspopup="true">
+                                        {{ auth()->user()->name }}
+                                        <svg class="-mr-1 ml-2 h-5 w-5" x-description="Heroicon name: solid/chevron-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" x-ref="menu-items" x-description="Dropdown menu, show/hide based on menu state." role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1" style="display: none;">
+                                    <div class="py-1" role="none">
+                                        <a href="{{ url('/telescope') }}" target="_blank" class="hover:bg-gray-100 transition duration-150 ease-in-out font-neucha font-bold block px-4 py-2 text-xl text-silver-900 tracking-widest" role="menuitem" tabindex="-1" id="menu-item-0">telescope</a>
+                                        <a href="https://wpm.atmonshi.com/wp-admin" target="_blank" class="hover:bg-gray-100 transition duration-150 ease-in-out font-neucha font-bold block px-4 py-2 text-xl text-silver-900 tracking-widest" role="menuitem" tabindex="-1" id="menu-item-2">wp admin</a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                                            @csrf
+                                            <a class="hover:bg-gray-100 transition duration-150 ease-in-out text-red-700 block w-full text-left px-4 py-2 text-xl tracking-widest" href="{{ route('logout') }}"
+                                               onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                                {{ __('Logout') }}
+                                            </a>
+                                        </form>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    @endauth
                 </div>
             </div>
         </div>
