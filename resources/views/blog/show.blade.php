@@ -34,8 +34,8 @@
             </div>
         </div>
 
-        <div class="pl-5 mb-8 font-neucha prose prose-2xl text-3xl leading-relaxed tracking-wide prose-light-blue">
-            {!! $post->post_content !!}
+        <div class="pl-5 mb-8 font-neucha text-3xl leading-relaxed tracking-wide prose prose-2xl prose-light-blue">
+            {!! nl2br($post->post_content) !!}
         </div>
     </div>
 

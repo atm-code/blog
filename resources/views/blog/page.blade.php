@@ -31,7 +31,7 @@
         @endif
 
         <div class="pl-5 mb-8 font-neucha prose prose-2xl text-3xl leading-relaxed tracking-wide prose-light-blue">
-            {!! $page->post_content !!}
+            {!! nl2br($post->post_content) !!}
         </div>
     </div>
 @endsection
