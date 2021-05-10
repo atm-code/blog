@@ -55,6 +55,7 @@
                                 <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" x-ref="menu-items" x-description="Dropdown menu, show/hide based on menu state." role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1" style="display: none;">
                                     <div class="py-1" role="none">
                                         <a href="https://wpm.atmonshi.com/wp-admin" target="_blank" class="hover:bg-gray-100 transition duration-150 ease-in-out font-neucha font-bold block px-4 py-2 text-xl text-silver-900 tracking-widest" role="menuitem" tabindex="-1" id="menu-item-2">wp admin</a>
+                                        <a href="https://stats.atm-code.com/realtime" target="_blank" class="hover:bg-gray-100 transition duration-150 ease-in-out font-neucha font-bold block px-4 py-2 text-xl text-silver-900 tracking-widest" role="menuitem" tabindex="-1" id="menu-item-2">Stats</a>
 
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST">
                                             @csrf
