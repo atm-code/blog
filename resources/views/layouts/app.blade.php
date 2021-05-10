@@ -38,19 +38,7 @@
     <script src="{{ mix('js/app.js') }}"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
     @if(!app()->environment('local'))
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-376141-13"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-
-            gtag('js', new Date());
-
-            gtag('config', 'UA-376141-13');
-        </script>
+        <script async defer data-website-id="b8d3d8af-b87a-40ce-94f4-a95eb1cc5e2b" src="https://stats.atm-code.com/umami.js"></script>
     @endif
-
 </body>
 </html>
