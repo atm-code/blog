@@ -56,6 +56,7 @@
                                     <div class="py-1" role="none">
                                         <a href="https://wpm.atmonshi.com/wp-admin" target="_blank" class="hover:bg-gray-100 transition duration-150 ease-in-out font-neucha font-bold block px-4 py-2 text-xl text-silver-900 tracking-widest" role="menuitem" tabindex="-1" id="menu-item-2">wp admin</a>
                                         <a href="https://stats.atm-code.com/realtime" target="_blank" class="hover:bg-gray-100 transition duration-150 ease-in-out font-neucha font-bold block px-4 py-2 text-xl text-silver-900 tracking-widest" role="menuitem" tabindex="-1" id="menu-item-2">Stats</a>
+                                        <a href="https://cloud.atmonshi.dev:2031" target="_blank" class="hover:bg-gray-100 transition duration-150 ease-in-out font-neucha font-bold block px-4 py-2 text-xl text-silver-900 tracking-widest" role="menuitem" tabindex="-1" id="menu-item-2">Cloud</a>
 
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST">
                                             @csrf
